@@ -47,7 +47,8 @@ jobs:
         with:
           name: node-app
           path: /tmp
-
+      - name: Extract files
+        run: tar -zxf /tmp/app-todo.tar.gz
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
